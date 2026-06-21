@@ -1,0 +1,15 @@
+# DCTII API Service dependencies (lightweight — no GDAL/torch)
+fastapi==0.115.6
+uvicorn==0.34.0
+google-cloud-bigquery==3.41.0
+google-cloud-storage==2.19.0
+google-auth==2.49.1
+numpy>=2.1.0
+pandas>=2.2.0
+
+# Predict endpoint additions (DCTII-Predict ML Module 6)
+lightgbm>=4.3.0
+shap>=0.45.0
+geopy>=2.4.1
+scikit-learn>=1.5.0
+scipy>=1.13.0

@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+WORKDIR /app
+
+# Install system deps for GDAL/rasterio
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgdal-dev gcc g++ && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY pipeline/ ./pipeline/
+COPY requirements-pipeline.txt ./
+
+RUN pip install --no-cache-dir -r requirements-pipeline.txt
+
+CMD ["python", "-m", "pipeline.lst_ingestion"]

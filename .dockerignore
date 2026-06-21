@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+.pytest_cache
+tests/
+docs/
+research/
+terraform/
+dashboard/
+scripts/
+*.log
+*.json
+.git

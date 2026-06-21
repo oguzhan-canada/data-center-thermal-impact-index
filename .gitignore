@@ -1,0 +1,63 @@
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── Secrets / environment ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*-service-account*.json
+*credentials*.json
+gcp-key*.json
+
+# ── Terraform ────────────────────────────────────────────────────────────────
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+tf_plan.txt
+tf_apply.txt
+# Keep main.tf and .terraform.lock.hcl (committed)
+
+# ── Large third-party data (fetch via scripts/download_koppen.py) ────────────
+static/*.tif
+static/*.tiff
+*.nc
+*.grib
+
+# ── Model artifacts / outputs / logs ─────────────────────────────────────────
+output/
+models/
+*.log
+*.pkl
+*.joblib
+*.png
+!docs/**/*.png
+
+# ── Research binaries (not redistributed) ────────────────────────────────────
+*.pdf
+*.docx
+*.rtf
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

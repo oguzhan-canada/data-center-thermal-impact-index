@@ -1,0 +1,42 @@
+# DCTII Pipeline dependencies
+earthengine-api==1.4.2
+google-cloud-bigquery==3.41.0
+google-cloud-storage==2.19.0
+google-auth==2.49.1
+rasterio==1.4.3
+xarray==2025.3.1
+numpy==2.2.4
+pandas==2.2.3
+geopandas==1.0.1
+scikit-learn==1.6.1
+scipy==1.15.2
+shapely==2.0.7
+pyproj==3.7.1
+matplotlib==3.10.1
+seaborn==0.13.2
+# Causal inference: statsmodels used for Conley spatial HAC standard errors
+# and ARIMA-based temporal imputation diagnostics
+statsmodels==0.14.4
+
+# ML-Predict additions (DCTII-Predict ML Module 6)
+lightgbm>=4.3.0
+optuna>=3.6.0
+shap>=0.45.0
+geopy>=2.4.1
+
+# Causal inference (Python-native, replaces R rpy2/did/Synth dependency)
+# NOTE: Install locally for DiD/SCM work; not needed in pipeline container
+# pyfixest>=0.28.0       # Callaway & Sant'Anna staggered DiD
+# pysynth>=0.3.0         # Synthetic Control Methods
+# VERIFICATION REQUIRED before Stage 3:
+#   pysynth must support: (1) donor pool restriction by pre-period fit quality,
+#   (2) full V-matrix optimization (not just equal predictor weights),
+#   (3) permutation-based placebo tests (Abadie et al. 2010 inference).
+#   If any are missing, consider: (a) SparseSC, (b) SyntheticControlMethods,
+#   or (c) wrapping the R Synth package via rpy2 as a fallback for SCM only.
+#   Econometrics reviewers WILL check SCM implementation fidelity.
+
+# ML: spatiotemporal gap-filling and anomaly detection
+# NOTE: Install locally for ML work; not needed in pipeline container for core pipeline
+# torch>=2.2.0           # U-Net cloud gap-filling, LSTM autoencoder
+# torchvision>=0.17.0    # CNN for site discovery
