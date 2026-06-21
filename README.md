@@ -2,7 +2,7 @@
 
 **A satellite-grounded platform for measuring and predicting the urban-heat-island impact of data centers.**
 
-🔗 **Live demo:** [oguzhan-canada.github.io/data-center-thermal-impact-index/dashboard/dctii.html](https://oguzhan-canada.github.io/data-center-thermal-impact-index/dashboard/dctii.html)
+🔗 **Live demo:** [oguzhan-canada.github.io/data-center-thermal-impact-index/dashboard/dctii-demo.html](https://oguzhan-canada.github.io/data-center-thermal-impact-index/dashboard/dctii-demo.html)
 
 DCTII quantifies how much a data center warms its surroundings using a decade of public satellite land-surface-temperature (LST) data, control-matched comparison zones, and a physically-anchored 0–100 score. It ships with a **predictive ML module (DCTII-Predict)** that estimates the thermal footprint of a *planned* facility — before any satellite data for that site exists.
 
@@ -66,7 +66,8 @@ data-center-thermal-impact-index/
 │   └── download_koppen.py      Fetches the Köppen-Geiger climate raster (not vendored)
 ├── tests/                      Unit, integration & golden-regression tests (pytest)
 ├── dashboard/
-│   └── dctii.html              Interactive Leaflet map + Chart.js + Site Planner
+│   ├── dctii.html              Interactive Leaflet map + Chart.js + Site Planner (full app, needs API)
+│   └── dctii-demo.html         Static demo build for GitHub Pages (embedded sample data, no backend)
 ├── terraform/
 │   ├── main.tf                 GCP infra (BigQuery, Cloud Run, GCS, monitoring)
 │   └── .terraform.lock.hcl     Pinned provider versions
