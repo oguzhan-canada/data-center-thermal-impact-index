@@ -2,6 +2,8 @@
 
 **A satellite-grounded platform for measuring and predicting the urban-heat-island impact of data centers.**
 
+🔗 **Live demo:** [oguzhan-canada.github.io/data-center-thermal-impact-index/dashboard/dctii.html](https://oguzhan-canada.github.io/data-center-thermal-impact-index/dashboard/dctii.html)
+
 DCTII quantifies how much a data center warms its surroundings using a decade of public satellite land-surface-temperature (LST) data, control-matched comparison zones, and a physically-anchored 0–100 score. It ships with a **predictive ML module (DCTII-Predict)** that estimates the thermal footprint of a *planned* facility — before any satellite data for that site exists.
 
 > Built on a 10-year panel of **42 data-center sites across 6 metro regions** (Phoenix, Houston, Central Texas, Northern Virginia, Toronto, Montreal), with a FastAPI service, an interactive Leaflet/Chart.js dashboard, and reproducible Terraform infrastructure on Google Cloud.
