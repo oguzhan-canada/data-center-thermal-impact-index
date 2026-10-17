@@ -1115,8 +1115,9 @@
 
     // Map — dark CartoDB Voyager
     const map = L.map('map', { zoomControl: true }).setView([36.0, -95.0], 4);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 18
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
     }).addTo(map);
 
     function scoreColor(s) {
